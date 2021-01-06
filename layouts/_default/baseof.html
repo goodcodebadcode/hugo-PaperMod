@@ -19,6 +19,9 @@
         {{- end }}
     </main>
     {{- partialCached "footer.html" . .Type .Layout .Params }}
+    {{- if (and .Site.Params.comments (ne .Params.comments false) ) }}
+    <script id="dsq-count-scr" src="//{{ $.Site.Params.disqusShortname }}.disqus.com/count.js" async></script>
+    {{- end }}
 </body>
 
 </html>

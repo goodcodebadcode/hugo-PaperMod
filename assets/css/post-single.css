@@ -11,6 +11,7 @@
 .post-description {
     margin-top: 10px;
     margin-bottom: 5px;
+    font-size: 20px;
 }
 
 .post-meta {
@@ -66,7 +67,7 @@
 
 .post-content a,
 .toc a:hover {
-    box-shadow: 0 1px 0 var(--primary)
+    color: var(--links);
 }
 
 .post-content a code {
@@ -226,7 +227,8 @@
 }
 
 .post-content img {
-    border-radius: 4px
+    margin: var(--gap) 0;
+    border-radius: 8px;
 }
 
 .post-content img[src*='#center'] {
@@ -275,13 +277,21 @@
 }
 
 .post-footer {
-    margin-top: 56px
+    margin-top: 56px;
+    padding: 56px 0;
+    border-top: 1px solid #ebf2f6;
+}
+
+.post-footer p {
+    color: #bbb;
+    margin: 16px 0;
+    font-size: 14px;
 }
 
 .post-tags li {
     display: inline-block;
     margin-inline-end: 3px;
-    margin-bottom: 5px
+    margin: 16px 8px 5px 0;
 }
 
 .post-tags a,
@@ -295,19 +305,87 @@
     padding-inline-end: 14px;
     color: var(--secondary);
     font-size: 14px;
-    line-height: 34px;
+    line-height: 1.5;
     background: var(--code-bg);
     border-radius: 4px
 }
 
-.post-tags a:hover {
-    background: var(--border)
+.post-tags a.html {
+    background-color: #f53900;
+    color: #fff;
+}
+
+.post-tags a.css {
+    background-color: #2965f1;
+    color: #fff;
+}
+
+.post-tags a.javascript {
+    background-color: #f7df1e;
+    color: #000;
+}
+
+.post-tags a.react {
+    background-color: #222;
+    color: #61daf6;
+}
+
+.post-tags a.typescript {
+    background-color: #234A84;
+    color: #fff;
+}
+
+.post-tags a.nodejs {
+    background-color: #3d8836;
+    color: #fff;
+}
+
+.post-tags a.ubuntu {
+    background-color: #e95420;
+    color: #fff;
+}
+
+.post-tags a.bash {
+    background-color: #943d3b;
+    color: #fff;
+}
+
+.post-tags a.webdev {
+    background-color:#562765;
+    color: #fff;
+}
+
+.post-tags a.python {
+    background-color: #1e38bb;
+    color: #ffdf5B;
+}
+
+.post-tags a.markdown {
+    background-color: #e5ffe3;
+    color: #363636;
+}
+
+.post-tags a.linux {
+    background-color: #000;
+    color: #4ff14f;
+}
+
+.post-tags a.datascience {
+    background-color: #009999;
+    color: #fff;
+}
+
+.post-tags a.news {
+    background-color: #111;
+    color: #fff9ac;
 }
 
 .share-buttons {
     margin-top: var(--gap);
     padding-inline-start: var(--radius);
     border-radius: var(--radius);
+    border-width: 2px;
+    border-color: #dbdfe4;
     display: flex;
     overflow-x: auto
 }

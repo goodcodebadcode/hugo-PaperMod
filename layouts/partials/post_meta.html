@@ -10,8 +10,10 @@
 
 {{ with (partial "author.html" . ) }}
 {{ $scratch.Add "meta" (slice .)}}
-{{end}}
+{{ end }}
 
 {{- with ($scratch.Get "meta")}}
 {{- delimit . "&nbsp;·&nbsp;"}}
 {{- end }}
+
+{{- partial "comment_count.html" . }}

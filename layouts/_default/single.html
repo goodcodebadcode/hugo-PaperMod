@@ -9,6 +9,13 @@
     <div class="post-description">
       {{ .Description }}
     </div>
+    {{- if .Params.tags }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms "tags") }}
+      <li><a href="{{ .Permalink }}" class="{{ .LinkTitle }}">#{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- end }} 
     {{- if .Params.hideMeta }}{{ else }}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
@@ -48,22 +55,11 @@
   <div class="post-content">
     {{- partial "anchored_headings.html" .Content -}}
   </div>
-  <footer class="post-footer">
-    {{- if .Params.tags }}
-    <ul class="post-tags">
-      {{- range ($.GetTerms "tags") }}
-      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-      {{- end }}
-    </ul>
-    {{- end }}
-    {{- if (and .Site.Params.ShowShareButtons (ne .Params.disableShare true) ) }}
+  <footer class="post-footer">   
+    {{- partial "written_by.html" . }}
     {{- partial "share_icons.html" . }}
-    {{- end }}
   </footer>
-
-  {{- if and ($.Site.Params.comments) (ne .Params.comments false) }}
   {{- partial "comments.html" . }}
-  {{- end }}
 </article>
 
 {{- end  }}{{/* end main */}}

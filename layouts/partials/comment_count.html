@@ -1,0 +1,3 @@
+{{- if (and .Site.Params.comments (ne .Params.comments false) ) }}
+·&nbsp;<span class="disqus-comment-count" data-disqus-url="{{ .Permalink }}#disqus_thread"></span>
+{{- end }}
