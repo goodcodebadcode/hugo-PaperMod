@@ -69,7 +69,7 @@
 <link rel="alternate" hreflang="{{- .Lang -}}" href="{{- .Permalink -}}" />
 {{ end }}
 {{- partial "extend_head.html" . -}}
-<!-- Misc -->
+<!-- Hugo Internal Templates -->
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
 {{- template "_internal/google_analytics_async.html" . }}
 {{- template "_internal/google_news.html" . }}
