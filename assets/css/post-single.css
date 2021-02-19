@@ -227,8 +227,7 @@
 }
 
 .post-content img {
-    margin: var(--gap) 0;
-    border-radius: 8px;
+    margin: 40px auto;
 }
 
 .post-content img[src*='#center'] {
